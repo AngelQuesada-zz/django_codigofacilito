@@ -12,3 +12,7 @@ refugio/apps/mascota/migrations/__pycache__/
 refugio/apps/mascota/__pycache__/
 
 refugio/apps/__pycache__/
+
+refugio/apps/adopcion/migrations/
+
+refugio/apps/mascota/migrations/
