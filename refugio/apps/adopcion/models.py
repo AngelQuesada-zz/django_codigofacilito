@@ -10,3 +10,5 @@ class Persona(models.Model):
     email = models.EmailField(max_length=254)
     domicilio = models.TextField()
 
+    def __str__(self):
+        return '{} {}'.format(self.nombre, self.apellidos)
