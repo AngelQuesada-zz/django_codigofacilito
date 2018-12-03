@@ -5,11 +5,12 @@
         <title>{% block title %}{% endblock title %}</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
         <link rel="stylesheet" href="{% static 'css/bootstrap_minty_theme.css' %}">
+        <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
     </head>
     <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <a class="navbar-brand" href="#">Refugio</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -17,30 +18,82 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">Features</a>
-                <a class="nav-item nav-link" href="#">Pricing</a>
-                <a class="nav-item nav-link disabled" href="#">Disabled</a>
+                <a class="nav-item nav-link" href="#">Mascotas</a>
+                <a class="nav-item nav-link" href="#">Personas</a>
+                <a class="nav-item nav-link" href="#">Adopciones</a>
             </div>
         </div>
     </nav>
-    {% block header %}  
+
     <header>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <h1 class="display-3">Mascotas</h1>
-                <p class="lead">Esto es la cabecera de la app mascota</p>
+                {% block header %}  
+                <h1 class="display-3">Plantilla</h1>
+                <p class="lead">Plantilla lead</p>
                 <hr class="my-2">
-                <p>Esta cabecera es una plantilla</p>
+                <p>Plantilla my-2</p>
+                {% endblock header %}
             </div>
         </div>
     </header>
-    {% endblock header %}
         
-    {% block content %}
-        <h5>Contenido</h5>
-    {% endblock content %}
-        
+    <div class="container">
+        {% block content %}
+            <h5>Contenido</h5>
+        {% endblock content %}
+    </div>
+
+
+<footer class="page-footer font-small blue pt-4">
+    <div class="container-fluid text-center text-md-left">
+
+        <div class="row">
+
+            <div class="col-md-6 mt-md-0 mt-3">
+
+                <h5 class="text-uppercase">Proyecto Django</h5>
+                <p>Pues aquí probaré un poquito qué tal el tema este de Django.</p>
+
+            </div>
+
+            <hr class="clearfix w-100 d-md-none pb-3">
+
+            <div class="col-md-3 mb-md-0 mb-3">
+
+                <h5 class="text-uppercase">Links</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#!">Link 1</a>
+                    </li>
+                    <li>
+                        <a href="#!">Link 2</a>
+                    </li>
+                    <li>
+                        <a href="#!">Link 3</a>
+                    </li>
+                    <li>
+                        <a href="#!">Link 4</a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="col-md-3 mb-md-0 mb-3">
+
+                <h5 class="text-uppercase">Links</h5>
+
+            </div>
+        </div>
+    </div>
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+        <a href="#"> Ángel Quesada</a>
+    </div>
+    <!-- Copyright -->
+
+</footer>
     {% block footer %}
         
     {% endblock footer %}
