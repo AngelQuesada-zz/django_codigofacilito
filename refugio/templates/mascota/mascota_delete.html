@@ -1,0 +1,25 @@
+{% extends 'base/base.html' %}
+
+{% block header %}
+
+<h1 class="display-3">Mascotas</h1>
+<p class="lead">Eliminación de mascota</p>
+<hr class="my-2">
+<p>Eliminar mascota</p>
+
+{% endblock header %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+    <div class="col-md-7">
+        <form action="" method="post">
+            {% csrf_token %}
+            <h3>¿Estás seguro de que quieres eliminar el registro de {{ mascota.nombre }}?</h3>
+            <button class="btn btn-danger btn-block" type="submit">Eliminar</button>
+            <button class="btn btn-primary btn-block" href="{% url 'mascota:mascota_listar' %}">Volver Atrás</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
