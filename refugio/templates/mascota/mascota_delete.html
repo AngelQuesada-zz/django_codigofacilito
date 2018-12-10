@@ -15,7 +15,7 @@
     <div class="col-md-7">
         <form action="" method="post">
             {% csrf_token %}
-            <h3>¿Estás seguro de que quieres eliminar el registro de {{ mascota.nombre }}?</h3>
+            <h3>¿Estás seguro de que quieres eliminar el registro de {{ object.nombre }}?</h3>
             <button class="btn btn-danger btn-block" type="submit">Eliminar</button>
             <button class="btn btn-primary btn-block" href="{% url 'mascota:mascota_listar' %}">Volver Atrás</button>
         </form>
