@@ -2,6 +2,32 @@
     margin-bottom:3rem;
 }
 
+
+
+/*  
+==============================
+    Footer
+============================== 
+*/
+
 footer{
     border-top:3px solid #5eb69d;
+}
+
+footer ul.redes_sociales{
+    float:left;
+}
+
+footer ul.redes_sociales > li {
+    float: left;
+    margin-right:1rem;
+    font-size:1.3rem;
+    cursor:pointer;
+}
+
+footer .footer-copyright{
+    color:white;
+}
+footer .footer-copyright a{
+    color: white;
 }
