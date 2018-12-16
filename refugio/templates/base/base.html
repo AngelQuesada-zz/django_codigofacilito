@@ -11,12 +11,14 @@
         <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
     </head>
     <body>
-
+    
+    {% block navbar %}
+           
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <a class="navbar-brand" href="#">Refugio</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
@@ -27,18 +29,20 @@
         </div>
     </nav>
 
+    {% endblock navbar %}
+
+    {% block header %}  
     <header>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                {% block header %}  
                 <h1 class="display-3">Plantilla</h1>
                 <p class="lead">Plantilla lead</p>
                 <hr class="my-2">
                 <p>Plantilla my-2</p>
-                {% endblock header %}
             </div>
         </div>
     </header>
+    {% endblock header %}
         
     <div class="container">
         {% block content %}

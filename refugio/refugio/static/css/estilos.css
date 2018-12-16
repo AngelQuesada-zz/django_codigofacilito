@@ -31,3 +31,19 @@ footer .footer-copyright{
 footer .footer-copyright a{
     color: white;
 }
+
+/*  
+==============================
+    Login
+============================== 
+*/
+
+.index_login .login{
+    margin-top:20%;
+    padding:3rem 2rem;
+    background:white;
+}
+
+.index_login .btn_login{
+    margin-top:2rem;
+}

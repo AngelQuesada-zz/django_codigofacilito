@@ -2,24 +2,29 @@
 
 {% block header %}
 
-    <h1 class="display-3">Mascotas</h1>
-    <p class="lead">Añadir nueva mascota</p>
-    <hr class="my-2">
-    <p>Rellena los datos del formulario para añadir una nueva mascota</p>
+<header>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-3">Mascotas</h1>
+            <p class="lead">Añadir nueva mascota</p>
+            <hr class="my-2">
+            <p>Rellena los datos del formulario para añadir una nueva mascota</p>
+        </div>
+    </div>
+</header>
 
 {% endblock header %}
 
 {% block content %}
 
-    <div class="row justify-content-center">
-        <div class="col-md-7">
-            <form action="" method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button class="btn btn-primary btn-block" type="submit">Guardar mascota</button>
-            </form>
-        </div>
+<div class="row justify-content-center">
+    <div class="col-md-7">
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-primary btn-block" type="submit">Guardar mascota</button>
+        </form>
     </div>
+</div>
 
 {% endblock %}
-    
