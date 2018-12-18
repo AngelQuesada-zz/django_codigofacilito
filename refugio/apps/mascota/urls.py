@@ -9,9 +9,9 @@ from apps.mascota.views import *
 app_name = "mascota"
 
 urlpatterns = [
-    path('', index, name='index'),
-    path('nuevo', MascotaCreateView.as_view(), name='mascota_crear'),
-    path('lista', MascotaList.as_view(), name='mascota_listar'),
-    path('editar/<int:pk>/', MascotaUpdateView.as_view(), name='mascota_editar'),
-    path('eliminar/<int:pk>/', MascotaDeleteView.as_view(), name='mascota_eliminar'),
+    path('', login_required(index), name='index'),
+    path('nuevo', login_required(MascotaCreateView.as_view()), name='mascota_crear'),
+    path('lista', login_required(MascotaList.as_view()), name='mascota_listar'),
+    path('editar/<int:pk>/', login_required(MascotaUpdateView.as_view()), name='mascota_editar'),
+    path('eliminar/<int:pk>/', login_required(MascotaDeleteView.as_view()), name='mascota_eliminar'),
 ]

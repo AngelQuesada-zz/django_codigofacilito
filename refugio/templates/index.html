@@ -4,11 +4,9 @@
 
 {% endblock navbar %}
 
-
 {% block header %}
     
 {% endblock header %}
-    .index_login
     
 {% block content %}
 
@@ -26,7 +24,7 @@
             </div>
 
             <div class="forgot">
-                <a href="#">¿Has olvidado tu contraseña?</a>
+                <a href="{% url 'password_reset' %}">¿Has olvidado tu contraseña?</a>
             </div>
 
             <button type="submit" class="btn_login btn btn-primary btn-block">Acceder</button>
@@ -35,8 +33,5 @@
     </div>
 </div>
 
-
-
-    
 {% endblock content %}
     
