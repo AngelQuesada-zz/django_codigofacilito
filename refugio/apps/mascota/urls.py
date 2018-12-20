@@ -14,4 +14,5 @@ urlpatterns = [
     path('lista', login_required(MascotaList.as_view()), name='mascota_listar'),
     path('editar/<int:pk>/', login_required(MascotaUpdateView.as_view()), name='mascota_editar'),
     path('eliminar/<int:pk>/', login_required(MascotaDeleteView.as_view()), name='mascota_eliminar'),
+    # path('listado/', listado, name='listado'),
 ]
