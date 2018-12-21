@@ -19,8 +19,13 @@ from django.conf.urls import include, url
 from django.contrib.auth.views import login, logout_then_login, password_reset, password_reset_done, password_reset_confirm, password_reset_complete
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('mascota/', include('apps.mascota.urls')),
+    path('admin/',
+         admin.site.urls
+        ),
+    path(
+        'mascota/',
+        include('apps.mascota.urls')
+        ),
     path('adopcion/', include('apps.adopcion.urls')),
     path('usuario/', include('apps.usuario.urls')),
     path('accounts/login/', login, {'template_name':'index.html'}, name='login'),

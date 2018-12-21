@@ -1,13 +1,13 @@
-import json
+# import json
 
-from rest_framework.views import APIView
+# from rest_framework.views import APIView
+# from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.views.generic import CreateView
 from django.urls import reverse_lazy
-from django.http import HttpResponse
 
 from apps.usuario.forms import RegistroForm
-from apps.usuario.serializers import UserSerializer
+# from apps.usuario.serializers import UserSerializer
 
 # Create your views here.
 
